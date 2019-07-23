@@ -53,7 +53,7 @@
               <SourceLocation resid="OEP.CustomFunctions.Script" />
             </Script>
             <Page>
-              <SourceLocation resid="OEP.CustomFunctions.Page"/>
+              <SourceLocation resid="OEP.SharedRuntime.Url"/>
             </Page>
             <Metadata>
               <SourceLocation resid="OEP.CustomFunctions.Json" />
@@ -78,7 +78,7 @@
 
           <!-- Function file is a HTML page that includes the JavaScript where functions for ExecuteAction will be called. 
             Think of the FunctionFile as the code behind ExecuteFunction. -->
-          <FunctionFile resid="OEP.DesktopFunctionFile.Url" />
+          <FunctionFile resid="OEP.SharedRuntime.Url" />
 
           <!-- PrimaryCommandSurface is the main Office Ribbon. -->
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
@@ -133,7 +133,7 @@
                   <!-- This is what happens when the command is triggered (E.g. click on the Ribbon). Supported actions are ExecuteFunction or ShowTaskpane. -->
                   <Action xsi:type="ShowTaskpane">
                     <!-- Provide a url resource id for the location that will be displayed on the task pane. -->
-                    <SourceLocation resid="OEP.Taskpane.Url" />
+                    <SourceLocation resid="OEP.SharedRuntime.Url" />
                   </Action>
                 </Control>
               </Group>
@@ -152,9 +152,7 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="OEP.CustomFunctions.Script" DefaultValue="https://officedev.github.io/custom-functions/addins/cfsample2/custom-functions.js" />
-        <bt:Url id="OEP.CustomFunctions.Page" DefaultValue="https://officedev.github.io/custom-functions/addins/cfsample2/sharedapp.html" />
-        <bt:Url id="OEP.DesktopFunctionFile.Url" DefaultValue="https://officedev.github.io/custom-functions/addins/cfsample2/sharedapp.html" />
-        <bt:Url id="OEP.Taskpane.Url" DefaultValue="https://officedev.github.io/custom-functions/addins/cfsample2/sharedapp.html" />
+        <bt:Url id="OEP.SharedRuntime.Url" DefaultValue="https://officedev.github.io/custom-functions/addins/cfsample2/sharedapp.html" />
         <bt:Url id="OEP.CustomFunctions.Json" DefaultValue="https://officedev.github.io/custom-functions/addins/cfsample2/custom-functions.json" />
         <bt:Url id="OEP.GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812" />
       </bt:Urls>
